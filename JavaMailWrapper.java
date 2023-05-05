@@ -175,4 +175,11 @@ public class JavaMailWrapper extends Email {
 	public String getMessageId() throws MessagingException {
 		return iMail.getHeader("Message-Id", null);
 	}
+	
+	public static boolean isValidEmailAddress(String email) {
+    // Regular expression for validating email addresses
+    // ...
+    return true; // Or false, depending on the validity of the email
+}
+
 }
