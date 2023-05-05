@@ -59,7 +59,9 @@ public abstract class Email {
 	public void setHTML(String message) throws Exception {
 		setBody(message, "text/html; charset=UTF-8");
 	}
-
+    public void getEMail(String email){
+		System.out.print(email);
+	}
 	public void addNotify() throws Exception {
 		addRecipient(ApplicationProperty.EmailNotificationAddress.value(), ApplicationProperty.EmailNotificationAddressName.value());
 	}
