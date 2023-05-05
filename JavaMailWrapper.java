@@ -68,7 +68,9 @@ public class JavaMailWrapper extends Email {
                 public PasswordAuthentication getPasswordAuthentication() {
                     return new PasswordAuthentication(user, password); }
             };
-			
+	else {
+		System.out.print("invalid user name");
+	     }
         }
         iMailSession = javax.mail.Session.getDefaultInstance(p, a);
         if ("true".equals(p.getProperty("mail.debug")))
