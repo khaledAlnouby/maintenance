@@ -591,7 +591,7 @@ public class EventImport extends EventRelatedImports {
 
 	private NonUniversityLocation findLocation(String name){
 		List locations = findNonUniversityLocationsWithName(name);
-		if (locations == null || locations.size() > 0){
+		if (locations == null || !locations.isEmpty()){
 			return((NonUniversityLocation) locations.iterator().next());
 		} else {
 			return(null);
