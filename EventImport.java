@@ -568,7 +568,7 @@ public class EventImport extends EventRelatedImports {
 			setCacheable(true).
 			setFlushMode(FlushMode.MANUAL).
 			list();
-			if (rooms != null && rooms.size() > 0){
+			if (rooms != null &&  !rooms.isEmpty()){
 				room = (Room) rooms.iterator().next();
 			}
 		}
