@@ -35,7 +35,7 @@ import org.unitime.timetable.model.Session;
  *
  */
 public class AcademicAreaImport extends BaseImport {
-
+    string AcademicArea ="Academic area " ;
     public void loadXml(Element root) throws Exception {
         if (!root.getName().equalsIgnoreCase("academicAreas")) {
         	throw new Exception("Given XML file is not acedemic areas load file.");
@@ -75,9 +75,9 @@ public class AcademicAreaImport extends BaseImport {
                 if (area == null) {
                 	area = new AcademicArea();
                 	area.setSession(session);
-                	info("Academic area " + abbv + (externalId == null ? "" : " (" + externalId + ")") + " created.");
+                	info( AcademicArea + abbv + (externalId == null ? "" : " (" + externalId + ")") + " created.");
                 } else {
-                	info("Academic area " + abbv + (externalId == null ? "" : " (" + externalId + ")") + " updated.");
+                	info(AcademicArea + abbv + (externalId == null ? "" : " (" + externalId + ")") + " updated.");
                 }
                 area.setExternalUniqueId(externalId);
                 area.setAcademicAreaAbbreviation(abbv);
@@ -87,7 +87,7 @@ public class AcademicAreaImport extends BaseImport {
             }
             
             for (AcademicArea area: id2area.values()) {
-            	info("Academic area " + area.getAcademicAreaAbbreviation() + " (" + area.getExternalUniqueId() + ") deleted.");
+            	info(AcademicArea + area.getAcademicAreaAbbreviation() + " (" + area.getExternalUniqueId() + ") deleted.");
             	getHibSession().delete(area);
             }
             
