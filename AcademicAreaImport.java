@@ -51,8 +51,8 @@ public class AcademicAreaImport extends BaseImport {
             if (session == null)
                 throw new Exception("No session found for the given campus, year, and term.");
             
-            Map<String, AcademicArea> id2area = new Hashtable<String, AcademicArea>();
-            Map<String, AcademicArea> abbv2area = new Hashtable<String, AcademicArea>();
+            Map<String, AcademicArea> id2area = new HashMap<String, AcademicArea>();
+            Map<String, AcademicArea> abbv2area = new HashMap<String, AcademicArea>();
             for (AcademicArea area: (List<AcademicArea>)getHibSession().createQuery(
             		"from AcademicArea where session.uniqueId=:sessionId").setLong("sessionId", session.getUniqueId()).list()) {
             	if (area.getExternalUniqueId() != null)
