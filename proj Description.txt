@@ -1,0 +1,6 @@
+UniTime is a comprehensive educational scheduling system that supports developing
+course and exam timetables, managing changes to these timetables, sharing rooms
+with other events, and scheduling students to individual classes.
+we understand the project by reading the description  and analyzing the code we used the opportuistic technique that is a hybrid of the two techniques
+1. Begin with top-down, gain an overview of the functions of the program
+2. Then selectively apply bottom-up strategies when nearing “code level”
