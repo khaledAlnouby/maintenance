@@ -1,0 +1,19 @@
+bug 1 : 
+replace room.size to room.isEmpty() ; 
+and 
+replace location.size to location.isEmpty();  
+
+in EventImport.java 
+
+
+
+bug 2 : 
+convert hashtable to hashMap ;
+
+ in AcademicAreaImport.java
+
+
+
+
+bug 3 :
+fixing and remove duplicate of "Academic Area" to a variable of string named by AcademicArea     in AcademicAreaImport.java 
